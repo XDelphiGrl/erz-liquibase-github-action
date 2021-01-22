@@ -3,6 +3,14 @@ RUN set -x \
   && echo liquibase-liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz" \
   && tar -xzf liquibase-${LIQUIBASE_VERSION}.tar.gz \
 
+COPY --chown=liquibase:liquibase docker-entrypoint.sh /liquibase/
+COPY --chown=liquibase:liquibase liquibase.docker.properties /liquibase/
+
+RUN chmod 0755 /liquibase/docker-entrypoint.sh
+
+VOLUME /liquibase/classpath
+VOLUME /liquibase/changelog
+
 COPY entry.sh /entry.sh
 
 ENTRYPOINT ["/entry.sh"]
