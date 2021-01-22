@@ -1,4 +1,4 @@
-FROM xdelphigrl/docker:v3.4
+FROM xdelphigrl/docker:3.4
 
 COPY entry.sh /entry.sh
 
