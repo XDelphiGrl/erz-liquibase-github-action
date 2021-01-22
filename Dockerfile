@@ -32,8 +32,8 @@ RUN set -x \
   && rm liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz
 
 
-COPY --chown=liquibase:liquibase docker-entrypoint.sh /liquibase/
-COPY --chown=liquibase:liquibase liquibase.docker.properties /liquibase/
+COPY docker-entrypoint.sh /liquibase/
+COPY liquibase.docker.properties /liquibase/
 
 RUN chmod 0755 /liquibase/docker-entrypoint.sh
 
