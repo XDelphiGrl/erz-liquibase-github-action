@@ -34,7 +34,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.operation }}
     - ${{ inputs.classpath }}
