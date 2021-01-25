@@ -36,7 +36,7 @@ jobs:
       # Login to GitHub Package Registry
       -
         name: Login to GitHub Package Registry
-        uses: ./
+        uses: XDelphiGrl/login-action@v0.1
         with:
           registry: docker.pkg.github.com
           username: XDelphiGrl
