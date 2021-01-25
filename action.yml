@@ -32,15 +32,9 @@ inputs:
   referenceUrl: # string
     description: 'Reference URL for diff'
     required: false
-     steps:
-   - uses: docker/login-action@v1
-     with:
-          registry: docker.pkg.github.com
-          username: XDelphiGrl
-          password: ${{ secrets.GITHUB_TOKEN }}
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700'
   args:
     - ${{ inputs.operation }}
     - ${{ inputs.classpath }}
