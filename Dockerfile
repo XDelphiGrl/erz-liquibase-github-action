@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700
+FROM daticalerzsebet/docker:latest
 
 COPY entry.sh /entry.sh
 
