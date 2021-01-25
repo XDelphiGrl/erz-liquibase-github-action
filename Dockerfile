@@ -1,4 +1,4 @@
-FROM liquibase/liquibase:4.2.2
+FROM docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700
 
 COPY entry.sh /entry.sh
 

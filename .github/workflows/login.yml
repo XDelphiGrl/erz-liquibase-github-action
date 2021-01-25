@@ -32,3 +32,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Login to GitHub Package Registry
+      -
+        name: Login to GitHub Package Registry
+        uses: ./
+        with:
+          registry: docker.pkg.github.com
+          username: XDelphiGrl
+          password: ${{ secrets.GITHUB_TOKEN }}
+
